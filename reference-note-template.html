@@ -1,29 +1,20 @@
+```
 # This template is specifically for importing/sharing, using better 
 # notes 'import from clipboard': copy the content and
 # goto Zotero menu bar, click Tools->New Template from Clipboard.  
 # Do not copy-paste this to better notes template editor directly.
-name: "[item]Reference Note (backup)"
+name: "[item]Reference Note"
 zoteroVersion: "7.0.12-beta.1+31bbf2acf"
 pluginVersion: "2.2.3-beta.2"
-savedAt: "2025-01-06T22:28:18.222Z"
+savedAt: "2025-01-06T23:41:57.031Z"
 content: |-
   <!-- Based on [Paper Notes](https://github.com/windingwind/zotero-better-notes/discussions/1099) -->
   <!-- Title -->
   	<header>
-  	<h1 style="padding:8px;">
+  	<h1>
         <a href="zotero://select/items/1_${topItem.key}">
-  	  ${(() => {
-          const date = topItem.getField("date").split('T')[0];
-          const title = topItem.getField("title");
-          const titleTranslation = topItem.getField("titleTranslation");
-          if (date && titleTranslation) {
-    		return `${title}`;
-          } else if (date) {
-    		return `${title}`;
-          } else {
-            return `${title}`;
-          }
-        })()}</a>
+  	  ${Zotero.QuickCopy.getContentFromItems([topItem],'bibliography=http://www.zotero.org/styles/american-sociological-association').html}
+  	  </a>
       </h1>
   <p><b>Reference Notes</b></p>
   </header>
@@ -77,4 +68,5 @@ content: |-
   <h2>↑Referred from</h2>
   <h2>↓References</h2>
   <h2>↔︎Related to</h2>
-  <h2>Source notes</h2><br />
+  <h2>Source notes</h2>
+```
