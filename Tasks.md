@@ -7,3 +7,4 @@
 - [ ] “References” and “Referenced in” are problematic labels. The purpose of these are to show *where I found the sources*, in order to establish the research chain, *not* to list every paper you happen to have (or that exists!) that it’s referenced in or that it references. Better labels would be better.
     - [x] How about “Referred from”? That’s a step forward.
 - [ ] Create new Style, based on [American Journal of Sociology](https://www.zotero.org/styles/american-journal-of-sociology), just for this purpose.
+    - [ ] Probably want to change it so that the title comes first, given that BN cuts off text that's too long when you create a link between notes.
