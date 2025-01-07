@@ -5,7 +5,7 @@
 name: "[item]Reference Note"
 zoteroVersion: "7.0.12-beta.1+31bbf2acf"
 pluginVersion: "2.2.3-beta.4"
-savedAt: "2025-01-07T05:15:03.064Z"
+savedAt: "2025-01-07T05:28:13.391Z"
 content: |-
   <!-- Based on [Paper Notes](https://github.com/windingwind/zotero-better-notes/discussions/1099) -->
   <!-- Title -->
@@ -18,13 +18,11 @@ content: |-
   <p><b>Reference Notes</b></p>
   </header>
     <!-- Meta Data -->
-  <b>Item Type:</b>
+  <ul>
+  <li><b>Item Type:</b>
       ${topItem.itemType}
-    <br />
-  <b>Date Added:</b>
-      ${new Date().toLocaleString()}
-      <br />
-      ${(() => {
+  </li>
+  <li>    ${(() => {
               const doi = topItem.getField("DOI");
               if (doi) {
                 return `<b>DOI: </b> <a href="https://doi.org/${topItem.getField('DOI')}">${topItem.getField('DOI')}</a>`;
@@ -32,8 +30,11 @@ content: |-
                 return `<b>URL: </b><a href="${topItem.getField('url')}">${topItem.getField('url')}</a>`;
               }
             })()}
-    <br />
-    <b>Attachments: </b>
+   </li>
+   <li><b>Date Added:</b>
+      ${new Date().toLocaleString()}
+      </li>
+    <li><b>Attachments: </b>
       ${(() => {
               const attachments = Zotero.Items.get(topItem.getAttachments());
               const pdf = attachments.filter((i) => i.isPDFAttachment());
@@ -45,7 +46,8 @@ content: |-
                 return ``;
               }
             })()}
-  		
+  	</li>
+  	</ul>	
   <h2>↑Referred from</h2>
   <h2>↓References</h2>
   <h2>↔︎Related to</h2>
