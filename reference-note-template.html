@@ -5,7 +5,7 @@
 name: "[item]Reference Note"
 zoteroVersion: "7.0.12-beta.1+31bbf2acf"
 pluginVersion: "2.2.3-beta.4"
-savedAt: "2025-01-07T05:28:13.391Z"
+savedAt: "2025-01-07T05:30:28.497Z"
 content: |-
   <!-- Based on [Paper Notes](https://github.com/windingwind/zotero-better-notes/discussions/1099) -->
   <!-- Title -->
@@ -22,6 +22,9 @@ content: |-
   <li><b>Item Type:</b>
       ${topItem.itemType}
   </li>
+  <li><b>Date Added:</b>
+      ${new Date().toLocaleString()}
+      </li>
   <li>    ${(() => {
               const doi = topItem.getField("DOI");
               if (doi) {
@@ -31,9 +34,6 @@ content: |-
               }
             })()}
    </li>
-   <li><b>Date Added:</b>
-      ${new Date().toLocaleString()}
-      </li>
     <li><b>Attachments: </b>
       ${(() => {
               const attachments = Zotero.Items.get(topItem.getAttachments());
