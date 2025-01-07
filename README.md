@@ -1,9 +1,14 @@
-# Reference Chains
+# Reference Note Template
+for Zotero Better Notes
 
-It looks like it might be possible, with some combination of Better Notes and Actions & Tags, to set up the auto-reference chains I want, to where I can easily create directional links between items, using notes.
+## Background
+Something I’ve long wanted in a reference manager is the ability to form *reference chains*, where you can easily discover what research path led you to whatever document you’re viewing.
+
+After switching from [Mendeley](https://www.mendeley.com/reference-management/reference-manager) to [Zotero](https://www.zotero.org), seeing Zotero's [plugin](https://www.zotero.org/support/plugins) functionality, and messing with [Better Notes](https://github.com/windingwind/zotero-better-notes#readme), it looked like it might be possible, with some combination of Better Notes and [Actions and Tags](https://github.com/windingwind/zotero-actions-tags#readme), to set up the auto-reference chains I want, to where I can easily create directional links between items, using notes.
 
 Indeed it is, and I have done so!
 
+## Instructions
 The process is as such:
 
 1. Ensure the [Better Notes](https://github.com/windingwind/zotero-better-notes) and [Actions and Tags](https://github.com/windingwind/zotero-actions-tags#readme) Zotero plugins are installed (as this requires plugins, it can only be done on desktop, but the result will be visible on mobile (though the note links won’t function 😢)).
@@ -14,7 +19,10 @@ The process is as such:
     
     1. If you like, you can edit the template to choose another style, but this one works well for this purpose.
         
-4. Ensure my “Reference Note” Better Notes template is installed.
+4. Ensure this “Reference Note” Better Notes template is installed.
+    1. Copy the [raw file](https://github.com/Calorion/zotero-better-notes-reference-note-template/blob/main/reference-note-template.html).
+    2. In Zotero, choose Tools>New Template from Clipboard.
+    3. The template does *not* auto-update, so be sure to Watch this repository to be notified of changes!
     
 5. After importing a new item, or at another time when you wish to create a reference link, open (double-click) the item in Zotero.
     
@@ -51,18 +59,3 @@ The process is as such:
 9. (Optional) Create a Zotero relationship as well, using the “Related” section of the right pane. I’ve been doing this, but it may not be worthwhile, as it’s a mostly inferior version of the above.
     
 10. (Optional) Add “reference” and “referenced” tags as appropriate. I’ve been forgetting to do this, and I don’t know whether it’s worthwhile.
-    
-
-## Tasks
-
-- ✓After learning JavaScript, modify the template such that it will show the title in *[bibliography format](https://github.com/windingwind/zotero-better-notes/discussions/1246)* (preferably in the currently-selected style in Zotero, but I don’t think that’s possible) rather than simply the title of the item.
-    
-- If [windingwind](https://github.com/windingwind) fixes the @use-refresh title issue, perhaps change the template to update the metadata section at will. \\ He’s not going to fix it, but there’s a [workaround](https://github.com/windingwind/zotero-better-notes/issues/1247#issuecomment-2571755724).
-    
-- It’d be great to automate the whole process in Step 6. I wonder if there’s a way to do it with Actions and Tags?
-    
-- ✓This doesn’t generate titles for [Cases](zotero://select/library/items/DDKUPSGQ). Fix.
-    
-- “References” and “Referenced in” are problematic labels. The purpose of these are to show *where I found the sources*, in order to establish the research chain, *not* to list every paper you happen to have (or that exists!) that it’s referenced in or that it references. Better labels would be better.
-    
-    - How about “Referred from”? That’s a step forward.
