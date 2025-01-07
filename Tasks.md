@@ -8,3 +8,4 @@
     - [x] How about “Referred from”? That’s a step forward.
 - [ ] Create new Style, based on [American Journal of Sociology](https://www.zotero.org/styles/american-journal-of-sociology), just for this purpose.
     - [ ] Probably want to change it so that the title comes first, given that BN cuts off text that's too long when you create a link between notes.
+- [ ] Move this list to Issues(?)
