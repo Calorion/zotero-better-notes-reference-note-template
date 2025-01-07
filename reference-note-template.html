@@ -1,0 +1,80 @@
+# This template is specifically for importing/sharing, using better 
+# notes 'import from clipboard': copy the content and
+# goto Zotero menu bar, click Tools->New Template from Clipboard.  
+# Do not copy-paste this to better notes template editor directly.
+name: "[item]Reference Note (backup)"
+zoteroVersion: "7.0.12-beta.1+31bbf2acf"
+pluginVersion: "2.2.3-beta.2"
+savedAt: "2025-01-06T22:28:18.222Z"
+content: |-
+  <!-- Based on [Paper Notes](https://github.com/windingwind/zotero-better-notes/discussions/1099) -->
+  <!-- Title -->
+  	<header>
+  	<h1 style="padding:8px;">
+        <a href="zotero://select/items/1_${topItem.key}">
+  	  ${(() => {
+          const date = topItem.getField("date").split('T')[0];
+          const title = topItem.getField("title");
+          const titleTranslation = topItem.getField("titleTranslation");
+          if (date && titleTranslation) {
+    		return `${title}`;
+          } else if (date) {
+    		return `${title}`;
+          } else {
+            return `${title}`;
+          }
+        })()}</a>
+      </h1>
+  <p><b>Reference Notes</b></p>
+  </header>
+    <!-- Meta Data -->
+  <b>Item Type:</b>
+      ${topItem.itemType}
+    <br />
+   <b>Author:</b> 
+      ${{
+    	let author=topItem.getCreators().slice(0, 10).map((v) => v.firstName + " " + v.lastName).join("; ") + (topItem.getCreators().length > 10 ? "; et al." : ";");
+    	let names = String(author);
+    	if (names.endsWith(';')) {
+        names = names.slice(0, -1);
+      }
+    	names=names.split(/;\s*/)
+      	let wrappedNames = names.map(name => `${name.trim()}`);
+      	return wrappedNames.join(', ');
+      }}$
+    <br />
+  <b>Date Added:</b>
+      ${new Date().toLocaleString()}
+      <br />
+      ${(() => {
+              const doi = topItem.getField("DOI");
+              if (doi) {
+                return `<b>DOI: </b> <a href="https://doi.org/${topItem.getField('DOI')}">${topItem.getField('DOI')}</a>`;
+              } else {
+                return `<b>URL: </b><a href="${topItem.getField('url')}">${topItem.getField('url')}</a>`;
+              }
+            })()}
+    <br />
+      <b>Journal: </b>
+      ${topItem.getField('publicationTitle')}
+    <br />
+    <b>Publication Date: </b> 
+      ${topItem.getField("date").split('T')[0]}
+    <br />
+    <b>Attachments: </b>
+      ${(() => {
+              const attachments = Zotero.Items.get(topItem.getAttachments());
+              const pdf = attachments.filter((i) => i.isPDFAttachment());
+              if (pdf && pdf.length > 0) {
+                return `<a href="zotero://open-pdf/library/items/${pdf[0].key}">${pdf[0].getFilename()}</a>`;
+              } else if (attachments && attachments.length > 0) {
+                return `<a href="zotero://open-pdf/library/items/${attachments[0].key}">${attachments[0].getFilename()}</a>`;
+              } else {
+                return ``;
+              }
+            })()}
+  		
+  <h2>↑Referred from</h2>
+  <h2>↓References</h2>
+  <h2>↔︎Related to</h2>
+  <h2>Source notes</h2><br />
