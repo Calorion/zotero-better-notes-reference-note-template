@@ -40,7 +40,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-01-08T00:09:51+00:00</updated>
+    <updated>2025-01-08T00:47:50+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -145,8 +145,9 @@
   <macro name="contributors">
     <group delimiter=". ">
       <names variable="author">
-        <name and="text" name-as-sort-order="first" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
+        <name and="text" delimiter-precedes-last="always" et-al-min="2" et-al-use-first="1"/>
         <label form="short" prefix=", "/>
+        <et-al font-style="italic"/>
         <substitute>
           <names variable="editor"/>
           <names variable="translator"/>
