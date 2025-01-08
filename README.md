@@ -13,8 +13,8 @@ The process is as such:
 
 1. Ensure the [Better Notes](https://github.com/windingwind/zotero-better-notes) and [Actions and Tags](https://github.com/windingwind/zotero-actions-tags#readme) Zotero plugins are installed (as this requires plugins, it can only be done on desktop, but the result will be visible on mobile (though the note links won’t function 😢)).
 2. Install the “[Auto-run Better Notes template when opening an item](https://github.com/windingwind/zotero-actions-tags/discussions/108)” script.
-3. Install the [Reference Note citation style](https://github.com/Calorion/zotero-better-notes-reference-note-template/blob/main/reference-note.csl)
-    1. Click the “Download Raw File” button
+3. Install the [Reference Note citation style](https://github.com/Calorion/zotero-better-notes-reference-note-template/blob/main/reference-note.csl).
+    1. Click the “Download Raw File” button.
     2. Double-click the resulting file to open it with Zotero.
 4. Ensure this “Reference Note” Better Notes template is installed.
     1. Copy the [raw file](https://github.com/Calorion/zotero-better-notes-reference-note-template/blob/main/reference-note-template.html).
@@ -35,6 +35,6 @@ The process is as such:
     8. Select “References,” and click OK.
     9. Add any additional information to either note. You can click back and forth between them using the links in the notes.
     10. If the items are merely related to each other rather than referenced, substitute “Related to” for “Referred from” and “References” above.
-8. If the new note is not related to an existing item, make a note of where you found the item under Notes. This is *not* for general notes on the item, just for notes on provenance and references. Use a separate note for general notes on the item.
+8. If the new note is not related to an existing item, make a note of where you found the item under Source Notes. This is *not* for general notes on the item, just for notes on provenance and references. Use a separate note for general notes on the item.
 9. (Optional) Create a Zotero relationship as well, using the “Related” section of the right pane. I’ve been doing this, but it may not be worthwhile, as it’s a mostly inferior version of the above.
 10. (Optional) Add “reference” and “referenced” tags as appropriate. I’ve been forgetting to do this, and I don’t know whether it’s worthwhile.
