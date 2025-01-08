@@ -14,7 +14,7 @@ The process is as such:
 1. Ensure the [Better Notes](https://github.com/windingwind/zotero-better-notes) and [Actions and Tags](https://github.com/windingwind/zotero-actions-tags#readme) Zotero plugins are installed (as this requires plugins, it can only be done on desktop, but the result will be visible on mobile (though the note links won’t function 😢)).
 2. Install the “[Auto-run Better Notes template when opening an item](https://github.com/windingwind/zotero-actions-tags/discussions/108)” script.
 3. Install the [Reference Note citation style](https://github.com/Calorion/zotero-better-notes-reference-note-template/blob/main/reference-note.csl)
-    1. Click the “Download Raw File” button
+    1. Click the “Download Raw File” button
     2. Double-click the resulting file to open it with Zotero.
 4. Ensure this “Reference Note” Better Notes template is installed.
     1. Copy the [raw file](https://github.com/Calorion/zotero-better-notes-reference-note-template/blob/main/reference-note-template.html).
