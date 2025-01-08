@@ -43,7 +43,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-01-08T05:34:53+00:00</updated>
+    <updated>2025-01-08T05:40:20+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -199,14 +199,6 @@
       <choose>
         <if type="webpage post-weblog" match="any">
           <date variable="issued" form="text"/>
-        </if>
-      </choose>
-      <choose>
-        <if variable="issued" match="none">
-          <group delimiter=" ">
-            <text term="accessed" text-case="capitalize-first"/>
-            <date variable="accessed" form="text"/>
-          </group>
         </if>
       </choose>
     </group>
@@ -480,7 +472,6 @@
         <text variable="year-suffix" prefix="-"/>
       </else-if>
       <else>
-        <text term="no date" form="short"/>
         <text variable="year-suffix" prefix="-"/>
       </else>
     </choose>
