@@ -22,4 +22,4 @@ The process is as such:
     2. In Zotero, choose Tools>New Template from Clipboard.
     3. The template does *not* auto-update, so be sure to Watch this repository to be notified of changes!
 
-    For usage, see the “Use” section of the [Better Notes Discussion](https://github.com/windingwind/zotero-better-notes/discussions/1258) for Reference Note.
+For usage, see the “Use” section of the [Better Notes Discussion](https://github.com/windingwind/zotero-better-notes/discussions/1258) for Reference Note.
