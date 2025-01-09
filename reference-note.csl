@@ -43,7 +43,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-01-08T05:40:20+00:00</updated>
+    <updated>2025-01-09T01:14:40+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -182,7 +182,6 @@
   <macro name="archive">
     <group delimiter=". ">
       <text variable="archive_location" text-case="capitalize-first"/>
-      <text variable="archive"/>
       <text variable="archive-place"/>
     </group>
   </macro>
@@ -458,22 +457,26 @@
   </macro>
   <macro name="date">
     <choose>
-      <if variable="issued">
-        <group delimiter=" ">
-          <date variable="original-date" form="text" date-parts="year" prefix="(" suffix=")"/>
-          <date variable="issued">
-            <date-part name="year"/>
-          </date>
-        </group>
-        <text variable="year-suffix"/>
+      <if variable="issued" match="any">
+        <choose>
+          <if type="personal_communication article-magazine article-newspaper" match="none">
+            <group delimiter=" ">
+              <date variable="original-date" form="text" date-parts="year" prefix="(" suffix=")"/>
+              <date variable="issued">
+                <date-part name="year"/>
+              </date>
+            </group>
+            <text variable="year-suffix"/>
+          </if>
+          <else-if variable="status">
+            <text variable="status" text-case="capitalize-first"/>
+            <text variable="year-suffix" prefix="-"/>
+          </else-if>
+          <else>
+            <text variable="year-suffix" prefix="-"/>
+          </else>
+        </choose>
       </if>
-      <else-if variable="status">
-        <text variable="status" text-case="capitalize-first"/>
-        <text variable="year-suffix" prefix="-"/>
-      </else-if>
-      <else>
-        <text variable="year-suffix" prefix="-"/>
-      </else>
     </choose>
   </macro>
   <macro name="date-in-text">
