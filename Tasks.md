@@ -13,3 +13,5 @@
 - [ ] Consider removing City (at least) and Publisher from reference-note.csl.
     - [x] City done.
 - [ ] reference-note.csl lists all editors. I can't figure out how to make it use et al with editors.
+- [ ] Mention something in the readme(s) about the fact that Zotero's built-in "related" function doesn't cut the mustard.
+- [ ] Strongly consider making this repository *only* for the csl file.
