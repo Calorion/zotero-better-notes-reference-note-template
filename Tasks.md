@@ -12,3 +12,4 @@
 - [ ] Move this list to Issues(?)
 - [ ] Consider removing City (at least) and Publisher from reference-note.csl.
     - [x] City done.
+- [ ] reference-note.csl lists all editors. I can't figure out how to make it use et al with editors.

@@ -4,8 +4,9 @@
   <info>
     <title>Reference Note (note title)</title>
     <title-short>Reference Note</title-short>
-    <id>http://www.zotero.org/styles/reference-note</id>
+    <id>1312348e-7e30-40e8-ae0a-20b3d3f030b6</id>
     <link href="https://github.com/Calorion/zotero-better-notes-reference-note-template/blob/main/reference-note.csl" rel="self"/>
+    <link href="https://www.zotero.org/styles/chicago-author-date" rel="template"/>
     <link href="https://github.com/Calorion/zotero-better-notes-reference-note-template#readme" rel="documentation"/>
     <author>
       <name>Jim Syler</name>
@@ -43,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-01-09T01:14:40+00:00</updated>
+    <updated>2025-01-09T03:35:15+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -459,7 +460,7 @@
     <choose>
       <if variable="issued" match="any">
         <choose>
-          <if type="personal_communication article-magazine article-newspaper" match="none">
+          <if type="personal_communication article-magazine article-newspaper post-weblog" match="none">
             <group delimiter=" ">
               <date variable="original-date" form="text" date-parts="year" prefix="(" suffix=")"/>
               <date variable="issued">
