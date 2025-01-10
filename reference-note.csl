@@ -44,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-01-09T03:35:15+00:00</updated>
+    <updated>2025-01-10T20:41:56+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -149,7 +149,7 @@
   <macro name="contributors">
     <group delimiter=". ">
       <names variable="author">
-        <name and="text" delimiter-precedes-last="always" et-al-min="2" et-al-use-first="1"/>
+        <name and="text" et-al-min="2" et-al-use-first="1"/>
         <label form="short" prefix=", "/>
         <et-al font-style="italic"/>
         <substitute>
@@ -895,23 +895,9 @@
     </group>
   </macro>
   <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" givenname-disambiguation-rule="primary-name" collapse="year" after-collapse-delimiter="; ">
-    <layout prefix="(" suffix=")" delimiter="; ">
+    <layout delimiter="; ">
       <group delimiter=", ">
-        <choose>
-          <if variable="issued" match="any">
-            <group delimiter=" ">
-              <text macro="contributors-short"/>
-              <text macro="date-in-text"/>
-            </group>
-          </if>
-          <else>
-            <group delimiter=", ">
-              <text macro="contributors-short"/>
-              <text macro="date-in-text"/>
-            </group>
-          </else>
-        </choose>
-        <text macro="point-locators"/>
+        <text macro="title"/>
       </group>
     </layout>
   </citation>
