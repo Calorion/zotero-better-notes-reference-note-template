@@ -14,4 +14,111 @@
     - [x] City done.
 - [ ] reference-note.csl lists all editors. I can't figure out how to make it use et al with editors.
 - [ ] Mention something in the readme(s) about the fact that Zotero's built-in "related" function doesn't cut the mustard.
-- [ ] Strongly consider making this repository *only* for the csl file.
+- [x] Strongly consider making this repository *only* for the csl file.
+- [ ] et al isn't working properly. Items with more than one author or editor are not getting et al'd for some reason I can't determine.
+    - [ ] e.g. compare
+```
+	{
+		"id": "http://zotero.org/users/8962722/items/X3JPZUGY",
+		"type": "article-journal",
+		"abstract": "A copy of the manuscript can be found here (also can be found on PsychologyToday (Politics in Academia): \nhttps://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiikOmAnL3uAhURB50JHaulCv8QFjABegQIAxAC&url=https%3A%2F%2Fosf.io%2F495nc%2Fdownload&usg=AOvVaw1izCk8sLQ3Q1GXZU-TKGjf",
+		"language": "en",
+		"source": "ResearchGate",
+		"title": "Politics and academic values in higher education: just how much does political orientation drive the values of the ivory tower?",
+		"title-short": "Politics and Academic Values in Higher Education",
+		"URL": "https://www.researchgate.net/publication/319990558_Politics_and_Academic_Values_in_Higher_Education_Just_How_Much_Does_Political_Orientation_Drive_the_Values_of_the_Ivory_Tower",
+		"author": [
+			{
+				"family": "Geher",
+				"given": "Glenn"
+			},
+			{
+				"family": "Jewell",
+				"given": "Olivia"
+			},
+			{
+				"family": "Holler",
+				"given": "Richard"
+			},
+			{
+				"family": "Planke",
+				"given": "Julie"
+			},
+			{
+				"family": "Betancourt",
+				"given": "Kian"
+			},
+			{
+				"family": "Baroni",
+				"given": "Amanda"
+			},
+			{
+				"family": "DiSanto",
+				"given": "Jacqueline"
+			},
+			{
+				"family": "Gleason",
+				"given": "Morgan"
+			},
+			{
+				"family": "Eisenberg",
+				"given": "Jacqueline"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					11,
+					26
+				]
+			]
+		}
+	}
+]
+```
+, which works properly, with
+```
+[
+	{
+		"id": "http://zotero.org/users/8962722/items/YXG9SEN5",
+		"type": "book",
+		"ISBN": "978-0-07-802591-4",
+		"language": "en",
+		"publisher": "McGraw-Hill",
+		"title": "Fundamentals of financial accounting",
+		"URL": "https://www.pdfdrive.com/fundamentals-of-financial-accounting-e186191104.html",
+		"author": [
+			{
+				"family": "Phillips",
+				"given": "Fred"
+			},
+			{
+				"family": "Libby",
+				"given": "Robert"
+			},
+			{
+				"family": "Libby",
+				"given": "Patricia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2021",
+					2,
+					20
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2015"
+				]
+			]
+		}
+	}
+]
+```
+, which does not.
