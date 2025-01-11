@@ -44,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-01-11T03:55:29+00:00</updated>
+    <updated>2025-01-11T06:06:25+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -934,7 +934,6 @@
             <text macro="date"/>
           </group>
           <text macro="description"/>
-          <text macro="secondary-contributors" prefix=". "/>
           <text macro="container-title" prefix=". "/>
           <text macro="container-contributors"/>
           <text macro="edition"/>
