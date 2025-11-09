@@ -44,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-11-09T17:46:33+00:00</updated>
+    <updated>2025-11-09T18:17:38+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -940,7 +940,6 @@
           <text macro="locators-chapter"/>
           <text macro="collection-title-journal" prefix=", " suffix=", "/>
           <text macro="locators"/>
-          <text macro="collection-title" prefix=". "/>
           <text macro="issue"/>
           <text macro="locators-article"/>
           <text macro="access" prefix=". "/>
