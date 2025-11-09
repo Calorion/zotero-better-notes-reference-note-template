@@ -27,4 +27,4 @@ For usage, see the “Use” section of the [Better Notes Discussion](https://gi
 ## Change Log
 
 2025-11-09T11:55R Changed citation style to use short titles
-
+2025-11-09T12:20R Removed series information for non-journal articles
