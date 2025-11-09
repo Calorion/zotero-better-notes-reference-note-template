@@ -23,3 +23,8 @@ The process is as such:
     3. The template does *not* auto-update, so be sure to Watch this repository to be notified of changes!
 
 For usage, see the “Use” section of the [Better Notes Discussion](https://github.com/windingwind/zotero-better-notes/discussions/1258) for Reference Note.
+
+## Change Log
+
+2025-11-09T11:55R Changed citation style to use short titles
+
