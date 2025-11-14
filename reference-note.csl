@@ -44,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-11-14T03:25:07+00:00</updated>
+    <updated>2025-11-14T03:48:51+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -459,6 +459,7 @@
         <choose>
           <if type="personal_communication article-magazine article-newspaper post-weblog" match="none">
             <group delimiter=" ">
+              <date variable="original-date" form="text" date-parts="year" prefix="(" suffix=")"/>
               <date variable="issued">
                 <date-part name="year"/>
               </date>
