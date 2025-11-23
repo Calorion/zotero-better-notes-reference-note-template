@@ -44,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2025-11-23T19:03:54+00:00</updated>
+    <updated>2025-11-23T19:07:29+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -98,10 +98,6 @@
       <if type="chapter entry-dictionary entry-encyclopedia paper-conference" match="any">
         <group prefix=", " delimiter=", ">
           <names variable="container-author" delimiter=", ">
-            <label form="verb" suffix=" "/>
-            <name and="text" delimiter=", "/>
-          </names>
-          <names variable="editor translator" delimiter=", ">
             <label form="verb" suffix=" "/>
             <name and="text" delimiter=", "/>
           </names>
