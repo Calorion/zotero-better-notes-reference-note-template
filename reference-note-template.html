@@ -3,56 +3,40 @@
 # goto Zotero menu bar, click Tools->New Template from Clipboard.  
 # Do not copy-paste this to better notes template editor directly.
 name: "[item]Reference Note"
-zoteroVersion: "8.0-beta.16+5b82a3838"
-pluginVersion: "3.0.0-beta.2"
-savedAt: "2025-11-09T17:51:37.080Z"
+zoteroVersion: "9.0-beta.21+1a89239a1"
+pluginVersion: "3.1.1"
+savedAt: "2026-06-10T03:00:26.063Z"
 content: |-
-  <!-- Based on [Paper Notes](https://github.com/windingwind/zotero-better-notes/discussions/1099) -->
-  <!-- Title -->
-  <!-- Format from https://github.com/windingwind/zotero-better-notes/discussions/1246#discussioncomment-11752668 -->
-  <!-- This uses the [Reference Note citation style](https://github.com/Calorion/zotero-better-notes-reference-note-template) -->
-  	<header>
-  	<h1>
-        <a href="zotero://select/items/1_${topItem.key}">
-  	  ${Zotero.QuickCopy.getContentFromItems([topItem],'bibliography=1312348e-7e30-40e8-ae0a-20b3d3f030b6').html}
-  	  </a>
-      </h1>
-  <p><i>Reference notes</i></p>
-  </header>
-    <!-- Meta Data -->
-    <h2>Metadata</h2>
-  <ul>
-  <li><b>Item Type:</b>
-      ${topItem.itemType}
-  </li>
-  <li><b>Date Added:</b>
-      ${new Date().toLocaleString()}
-      </li>
-  <li>    ${(() => {
-              const doi = topItem.getField("DOI");
-              if (doi) {
-                return `<b>DOI: </b> <a href="https://doi.org/${topItem.getField('DOI')}">${topItem.getField('DOI')}</a>`;
-              } else {
-                return `<b>URL: </b><a href="${topItem.getField('url')}">${topItem.getField('url')}</a>`;
-              }
-            })()}
-   </li>
-    <li><b>Attachments: </b>
-      ${(() => {
-              const attachments = Zotero.Items.get(topItem.getAttachments());
-              const pdf = attachments.filter((i) => i.isPDFAttachment());
-              if (pdf && pdf.length > 0) {
-                return `<a href="zotero://open-pdf/library/items/${pdf[0].key}">${pdf[0].getFilename()}</a>`;
-              } else if (attachments && attachments.length > 0) {
-                return `<a href="zotero://open-pdf/library/items/${attachments[0].key}">${attachments[0].getFilename()}</a>`;
-              } else {
-                return ``;
-              }
-            })()}
-  	</li>
-  	</ul>	
-  <h2>↑Referred from</h2>
-  <h2>↓References</h2>
-  <h2>↔︎Related to</h2>
-  <h2>Source notes</h2>
+  // @use-markdown
+  // @comment Based on [Paper Notes](https://github.com/windingwind/zotero-better-notes/discussions/1099)
+  // @comment Title
+  // @comment Format from https://github.com/windingwind/zotero-better-notes/discussions/1246#discussioncomment-11752668
+  // @comment This uses the [Reference Note citation style](https://github.com/Calorion/zotero-better-notes-reference-note-template)
+  # [${Zotero.QuickCopy.getContentFromItems([topItem],'bibliography=1312348e-7e30-40e8-ae0a-20b3d3f030b6').html.replaceAll("\n", "")}](zotero://select/items/1_${topItem.key})
+  _Reference note_
+  ## Metadata
+  - **Item Type:** ${topItem.itemType}
+  - **Date Added:** ${new Date().toLocaleString()}
+  - ${{
+  	const doi = topItem.getField("DOI");
+  	if (doi) {
+  		return `**DOI:** [${topItem.getField('DOI')}](https://doi.org/${topItem.getField('DOI')})`;
+  	} else {
+  		return `**URL:** [${topItem.getField('url')}](${topItem.getField('url')})</a>`;
+  	}
+  }}$
+  - **Attachments:** ${{
+  	const attachments = Zotero.Items.get(topItem.getAttachments());
+  	const pdf = attachments.filter((i) => i.isPDFAttachment());
+  	if (pdf && pdf.length > 0) {
+  		return `[${pdf[0].getFilename()}](zotero://open-pdf/library/items/${pdf[0].key})</a>`;
+  	} else if (attachments && attachments.length > 0) {
+  		return `[${attachments[0].getFilename()}](zotero://open-pdf/library/items/${attachments[0].key})</a>`;
+  	} else {
+  		return ``;
+  	}
+  }}$
+  ## ↑Referred from
+  ## ↔︎Related to
+  ## Source notes
   <p></p>
