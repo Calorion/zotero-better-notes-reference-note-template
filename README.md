@@ -32,3 +32,4 @@ For usage, see the “Use” section of the [Better Notes Discussion](https://gi
 
 2025-11-09T15:35R Changed journal name to short form
 
+2026-06-09T22:02R Updated formatting to fix minor bugs and removed "References" section, as Better Notes now can show the Relation Graph in the note sidebar, meaning that it's easy to see what notes link to the selected one.
