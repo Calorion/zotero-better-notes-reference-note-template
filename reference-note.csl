@@ -44,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2026-06-11T00:47:34+00:00</updated>
+    <updated>2026-06-12T04:43:09+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -231,7 +231,7 @@
           </if>
           <else>
             <group delimiter=", ">
-              <text variable="title" text-case="title" font-style="italic"/>
+              <text variable="title" text-case="title" font-style="italic" prefix="Review of "/>
               <names variable="reviewed-author">
                 <label form="verb-short" text-case="lowercase" suffix=" "/>
                 <name and="text" delimiter=", "/>
