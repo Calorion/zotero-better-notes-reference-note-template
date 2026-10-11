@@ -44,7 +44,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>For use with zotero-better-notes-reference-note-template (based on Chicago)</summary>
-    <updated>2026-06-12T04:43:09+00:00</updated>
+    <updated>2026-10-11T20:03:50+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -319,10 +319,6 @@
             <text term="volume" form="short" text-case="capitalize-first" suffix=" "/>
             <number variable="volume" form="numeric"/>
           </group>
-          <group>
-            <number variable="number-of-volumes" form="numeric"/>
-            <text term="volume" form="short" prefix=" " plural="true"/>
-          </group>
         </group>
       </else-if>
       <else-if type="chapter entry-dictionary entry-encyclopedia paper-conference" match="any">
@@ -449,6 +445,17 @@
               </date>
             </group>
             <text variable="year-suffix"/>
+            <choose>
+              <if match="any" variable="original-date">
+                <group>
+                  <date form="text" variable="original-date" prefix=" (">
+                    <date-part name="year"/>
+                  </date>
+                </group>
+                <text variable="year-suffix"/>
+                <text value=")"/>
+              </if>
+            </choose>
           </if>
           <else-if variable="status">
             <text variable="status" text-case="capitalize-first"/>
