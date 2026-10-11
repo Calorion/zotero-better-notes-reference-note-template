@@ -26,6 +26,8 @@ For usage, see the “Use” section of the [Better Notes Discussion](https://gi
 
 ## Change Log
 
+2026-10-11T15:08R Changed citation style to not include volume count and to include original date published
+
 2025-11-09T11:55R Changed citation style to use short titles
 
 2025-11-09T12:20R Removed series information for non-journal articles
